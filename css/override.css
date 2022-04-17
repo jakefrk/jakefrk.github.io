@@ -49,5 +49,9 @@ h1 {
 }
  
 .post-header 
-  {border:solid
+  {border:solid;
+   mmin-width: 400px; 
 }
+
+article.post {
+  margin-top:3em}
