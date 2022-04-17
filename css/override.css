@@ -47,5 +47,7 @@ hr {
 h1 {
     font-size: 20px;
 }
-
-article > header  {border:solid}
+ 
+.post-header 
+  {border:solid
+}
