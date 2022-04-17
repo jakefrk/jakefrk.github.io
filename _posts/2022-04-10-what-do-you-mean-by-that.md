@@ -1,4 +1,4 @@
-## This is my first blog post
+## Can you explain what you mean by that?
 
 I joke that even though my job title contains the word “Engineer,” the core duty of my role is to ask “Can you explain what you mean by that?” again and again in its various forms. Nothing really technical about it...
 
