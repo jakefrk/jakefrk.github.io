@@ -4,6 +4,7 @@ I joke that even though my job title contains the word “Engineer,” the core 
 
 
 DISCOVERY QUESTIONS:
+
 • What is your expectation of how this will work?
 
 • What is your expected value/output/end-result of doing _ ?
