@@ -31,10 +31,6 @@
 RESUME TEST
 
 <header class="page-header">
-  <!-- Avatar -->
-  {%- if site.gravatar_hash -%}
-    <img src="https://www.gravatar.com/avatar/{{ site.gravatar_hash }}?size=100" alt="my photo" class="avatar no-print" itemprop="image">
-  {%- endif -%}
   <!-- Name and Suffix -->
   <div class="header-title">
     <span class="header-name" itemprop="name">{{ resume.header.name }}</span>
@@ -64,12 +60,6 @@ RESUME TEST
             {%- case item[0] -%}
               {%- when "GitHub"    -%}<img src="/img/socialicons/github.svg">
               {%- when "Twitter"   -%}<img src="/img/socialicons/twitter.svg">
-              {%- when "Medium"    -%}<img src="/img/socialicons/medium.svg">
-              {%- when "Dribbble"  -%}<img src="/img/socialicons/dribbble.svg">
-              {%- when "Facebook"  -%}<img src="/img/socialicons/facebook.svg">
-              {%- when "LinkedIn"  -%}<img src="/img/socialicons/linkedin.svg">
-              {%- when "Instagram" -%}<img src="/img/socialicons/instagram.svg">
-              {%- when "Website"   -%}<img src="/img/socialicons/website.svg">
             {%- endcase -%}
           </a>
         {%- endfor -%}
@@ -175,19 +165,7 @@ RESUME TEST
     {%- endfor -%}
   </section>
 {%- endif -%}
-
-{%- if resume.sections.recognition -%}
-  <section class="content-section">
-    <header class="section-header"><h2>Recognition</h2></header>
-    {%- for recognition in site.data.recognitions -%}
-      <div class="resume-item">
-        <h3 class="resume-item-title" itemprop="award">{{ recognition.award }}</h3>
-        <h4 class="resume-item-details">{{ recognition.organization }} &bull; {{ recognition.year }}</h4>
-        <div class="resume-item-copy">{{ recognition.summary }}</div>
-      </div>
-    {%- endfor -%}
-  </section>
-{%- endif -%}
+ 
 
 {%- if resume.sections.education -%}
   <section class="content-section">
@@ -208,21 +186,7 @@ RESUME TEST
       </div>
     {%- endfor -%}
   </section>
-{%- endif -%}
-
-{%- if resume.sections.projects -%}
-  <section class="content-section">
-    <header class="section-header"><h2>Personal Projects</h2></header>
-    {%- for project in site.data.projects -%}
-      <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
-        <meta itemprop="creator" content="{{ site.author }}" itemtype="http://schema.org/Person" />
-        <h3 class="resume-item-title" itemprop="name">{%- if project.url -%}<a href="{{ project.url }}" itemprop="url">{{ project.project }}</a>{%- else -%}{{ project.project }}{%- endif -%}</h3>
-        <h4 class="resume-item-details" itemprop="description">{{ project.role }}  &bull; {{ project.duration }}</h4>
-        <div class="resume-item-copy">{{ project.description }}</div>
-      </div>
-    {%- endfor -%}
-  </section>
-{%- endif -%}
+{%- endif -%} 
 
 {%- if resume.sections.associations -%}
   <section class="content-section">
@@ -236,54 +200,15 @@ RESUME TEST
     {%- endfor -%}
   </section>
 {%- endif -%}
-
-{%- if resume.sections.interests -%}
-  <section class="content-section">
-    <header class="section-header"><h2>Outside Interests</h2></header>
-    <div class="resume-item">
-      <div class="resume-item-copy">{{ site.data.interests.description }}</div>
-    </div>
-  </section>
-{%- endif -%}
-
-{%- if resume.sections.links -%}
-  <section class="content-section">
-    <header class="section-header"><h2>Additional Links</h2></header>
-    <div class="resume-item">
-      <ul class="resume-item-list">
-        {%- for item in site.data.links -%}<li><strong>{{ item.name }}</strong>: <a href="{{ item.url }}" target="_blank">{{ item.label }}</a></li>{%- endfor -%}
-      </ul>
-    </div>
-  </section>
-{%- endif -%}
-
-{%- if resume.sections.social_links -%}
-  <section class="content-section">
-    <header class="section-header"><h2>Social Links</h2></header>
-    <div class="resume-item">
-      {%- if resume.social -%}
-        <ul class="resume-item-list">
-          {%- for item in resume.social -%}<li><strong>{{ item[0] }}</strong>: <a href="{{ item[1] }}" target="_blank">{{ item[1] }}</a></li>{%- endfor -%}
-        </ul>
-      {%- endif -%}
-    </div>
-  </section>
-{%- endif -%}
-
+  
+ 
 <div class="bottom-bar no-print">
   <div class="bottom-bar__content">
     <div class="bottom-bar__text">
-      <a href="/assets/Chad Baldwin, MCSA - Senior Database Developer - Resume.pdf" >
+      <a href="/assets/jake-resume.pdf" >
         PDF version available here
       </a>
     </div>
     <button class="bottom-bar__close" type="button">&times;</button>
   </div>
-</div>
-
-{%- comment -%}
-<footer class="page-footer">
-  <p class="footer-line">Made by <a href="http://twitter.com/jglovier">@jglovier</a>. Fork me on <a href="https://github.com/jglovier/resume-template">GitHub</a>.</p>
-  <p class="footer-line">If this is your live resume, you can modify or remove this part. ;-)</p>
-</footer>
-{%- endcomment -%}
+</div  
