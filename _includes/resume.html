@@ -1,42 +1,25 @@
-As the primary client-facing technical contact, provided custom advertising
-solutions for world’s largest media companies and their distribution partners
-Lead end-to-end technical scoping for custom integrations with multi-faceted architecture stacks involving audience data providers, stream
-stitchers, transcoding services, proxy servers, user-privacy frameworks
-Worked with sales, engineering, and product teams on evaluating,
-recommending, and implementing both out-of-the-box and first-of-theirkind solutions for legacy accounts and newly-onboarded clients
-Constructed API calls as HTTP requests to ad server by testing and verifying
-URL parameters, key-values, flags, XML, and Header fields in both server-side
-and client-side environments across web, app, and CTV/OTT platforms
-Resolved ad delivery issues by querying and analyzing big data sets from
-server console output and transaction log files
-Authored integration playbook for executive-level management regarding
-high-profile “walled garden” partner on user-privacy and targeting limitations
-Designed and developed portfolio of websites to help capture 20,000+ online
-reviews to rank #1 in TripAdvisor’s NYC Tours
-Increased conversions and optimized online check-out experience across devices by utilizing booking processor API and deploying custom event tags for measuring on-site behavior and cross-site tracking
-Oversaw development of internal wiki and workflow automation tools to
-improve operational bottlenecks for a growing team of over 100
-Fabricated and installed interactive kiosks and display technologies for corporate
-lobbies, libraries, and schools Designed product graphics, marketing collateral, documentation, web content
-
-As the primary client-facing technical contact, provided custom advertising
-solutions for world’s largest media companies and their distribution partners
-Lead end-to-end technical scoping for custom integrations with multi-faceted architecture stacks involving audience data providers, stream
-stitchers, transcoding services, proxy servers, user-privacy frameworks
-Worked with sales, engineering, and product teams on evaluating,
-recommending, and implementing both out-of-the-box and first-of-theirkind solutions for legacy accounts and newly-onboarded clients
-Constructed API calls as HTTP requests to ad server by testing and verifying
-URL parameters, key-values, flags, XML, and Header fields in both server-side
-and client-side environments across web, app, and CTV/OTT platforms
-Resolved ad delivery issues by querying and analyzing big data sets from
-server console output and transaction log files
-Authored integration playbook for executive-level management regarding
-high-profile “walled garden” partner on user-privacy and targeting limitations
-Designed and developed portfolio of websites to help capture 20,000+ online
-reviews to rank #1 in TripAdvisor’s NYC Tours
-Increased conversions and optimized online check-out experience across devices by utilizing booking processor API and deploying custom event tags for measuring on-site behavior and cross-site tracking
-Oversaw development of internal wiki and workflow automation tools to
-improve operational bottlenecks for a growing team of over 100
-Fabricated and installed interactive kiosks and display technologies for corporate
-lobbies, libraries, and schools Designed product graphics, marketing collateral, documentation, web content
-F
+{%- if resume.sections.skills -%}
+  <section class="content-section">
+    <header class="section-header"><h2>Skills</h2></header>
+    {%- for skill in site.data.skills -%}
+      <div class="resume-item">
+        <h4 class="resume-item-details">{{ skill.skill }}</h4>
+        <div class="resume-item-copy">
+          {%- if skill.description -%}
+            <div class="skill-description">
+              {{ skill.description }}
+            </div>
+          {%- endif -%}
+          {%- if skill.list -%}
+            {%- assign skillSorted = skill.list | sort_natural -%}
+            <div class="skill-list">
+              {%- for item in skillSorted -%}
+                <span>{{ item }}</span>{%- if forloop.last -%}{%- else -%}<span> &bull; </span>{%- endif -%}
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endfor -%}
+  </section>
+{%- endif -%}
